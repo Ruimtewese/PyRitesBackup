@@ -1,0 +1,5 @@
+2023-12-07 10:47:21,557 - INFO - This is the logger file for player 2, Divan
+2023-12-07 10:47:21,557 - INFO - mo=money, vp=victory points, de=defences, di=discount, pe=permanant, te=temporary, , ca = cards, message
+2023-12-07 10:47:21,557 - INFO - mo	vp	de	di	pe	te	ca	message
+2023-12-07 10:47:21,558 - INFO - 3	0	0	0	0	0
+2023-12-07 10:47:39,186 - INFO - 4	0	0	0	0	0	Tax for min vp

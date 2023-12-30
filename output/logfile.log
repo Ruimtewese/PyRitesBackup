@@ -1,0 +1,45 @@
+07-Dec-23 10:47:21 - INFO - Prepare the game
+07-Dec-23 10:47:21 - INFO - Table created
+07-Dec-23 10:47:21 - INFO - Deck of cards created, total number of cards 120
+07-Dec-23 10:47:21 - INFO - This is the logger file for player 1, Rowland
+07-Dec-23 10:47:21 - INFO - mo=money, vp=victory points, de=defences, di=discount, pe=permanant, te=temporary, , ca = cards, message
+07-Dec-23 10:47:21 - INFO - mo	vp	de	di	pe	te	ca	message
+07-Dec-23 10:47:21 - INFO - 3	0	0	0	0	0
+07-Dec-23 10:47:21 - INFO - This is the logger file for player 2, Divan
+07-Dec-23 10:47:21 - INFO - mo=money, vp=victory points, de=defences, di=discount, pe=permanant, te=temporary, , ca = cards, message
+07-Dec-23 10:47:21 - INFO - mo	vp	de	di	pe	te	ca	message
+07-Dec-23 10:47:21 - INFO - 3	0	0	0	0	0
+07-Dec-23 10:47:21 - INFO - Game started
+07-Dec-23 10:47:36 - INFO - ...card drawn: Rowland 	governor 	-8m 	+0vp
+07-Dec-23 10:47:37 - INFO - ...card drawn: Rowland 	yellow 	ship 	+1m 	1a
+07-Dec-23 10:47:38 - INFO - ...card drawn: Rowland 	blue 	trader 	-3m 	+1vp
+07-Dec-23 10:47:38 - INFO - ...card drawn: Rowland 	 settler 	-4m 	+ 1vp
+07-Dec-23 10:47:38 - INFO - ...card drawn: Rowland 	sailor 	-5m 	+2vp
+07-Dec-23 10:47:38 - INFO - ...card drawn: Rowland 	governor 	-8m 	+0vp
+07-Dec-23 10:47:39 - INFO - ...card drawn: Rowland 	tax 	min
+07-Dec-23 10:47:39 - INFO - 4	0	0	0	0	0	Tax for min vp
+07-Dec-23 10:47:39 - INFO - --->	Rowland 	4m
+07-Dec-23 10:47:39 - INFO - 4	0	0	0	0	0	Tax for min vp
+07-Dec-23 10:47:39 - INFO - --->	Divan 	4m
+07-Dec-23 10:47:39 - INFO - ...card drawn: Rowland 	sailor 	-3m 	+1vp
+07-Dec-23 10:47:40 - INFO - ...card drawn: Rowland 	green 	ship 	+4m 	5a
+07-Dec-23 10:47:40 - INFO - ...card drawn: Rowland 	blue 	ship 	+2m 	2a
+07-Dec-23 10:47:40 - INFO - ...card drawn: Rowland 	sailor 	-9m 	+3vp
+07-Dec-23 10:47:41 - INFO - ...card drawn: Rowland 	yellow 	ship 	+1m 	1a
+07-Dec-23 10:47:41 - INFO - --->	Divan 	defeated by pirate ship
+07-Dec-23 10:47:41 - INFO - ---C	Witzbold check
+07-Dec-23 10:47:41 - INFO - --->	Divan 	 is the new start player
+07-Dec-23 10:47:51 - INFO - ...card drawn: Divan 	expidition
+07-Dec-23 10:47:51 - INFO - ---> Expedition moved to expedition area
+07-Dec-23 10:47:51 - INFO - ...card drawn: Divan 	witzbold 	-9m 	+3vp
+07-Dec-23 10:47:52 - INFO - ...card drawn: Divan 	sailor 	-3m 	+1vp
+07-Dec-23 10:47:52 - INFO - ...card drawn: Divan 	blue 	trader 	-5m 	+2vp
+07-Dec-23 10:47:52 - INFO - ...card drawn: Divan 	black 	ship 	+3m 	7a
+07-Dec-23 10:47:53 - INFO - ...card drawn: Divan 	 priest 	-4m 	+ 1vp
+07-Dec-23 10:47:53 - INFO - ...card drawn: Divan 	admiral 	-7m 	+2vp
+07-Dec-23 10:47:54 - INFO - ...card drawn: Divan 	 captain 	-4m 	+ 1vp
+07-Dec-23 10:47:54 - INFO - ...card drawn: Divan 	black 	ship 	+2m 	4a
+07-Dec-23 10:47:54 - INFO - --->	Divan 	defeated by pirate ship
+07-Dec-23 10:47:54 - INFO - ---C	Witzbold check
+07-Dec-23 10:47:54 - INFO - --->	Rowland 	 is the new start player
+07-Dec-23 10:47:56 - INFO - ...card drawn: Rowland 	sailor 	-3m 	+1vp

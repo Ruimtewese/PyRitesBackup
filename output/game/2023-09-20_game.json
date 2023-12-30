@@ -1,0 +1,13 @@
+{
+    "date": "2023-09-20",
+    "players": [
+        {
+            "id": 1,
+            "name": "Rowland"
+        },
+        {
+            "id": 2,
+            "name": "Divan"
+        }
+    ]
+}
