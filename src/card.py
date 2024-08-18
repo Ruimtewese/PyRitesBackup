@@ -30,11 +30,18 @@ class SettlerCaptainPriest(Card):
         Card (Class): Cards main class
     """
     def __init__(self, price, symbol) -> None:
-        """Initiation of the class
+        """Initialize the SettlerCaptainPriest class.
+
+        This method initializes the SettlerCaptainPriest class with the given price and symbol.
+        It also sets the victory points (vp) to 1 and assigns a name based on the symbol.
 
         Args:
-            price (int): How much it costs 
-            symbol (str): Symbol of person
+            price (int): The cost of the card.
+            symbol (str): The symbol of the person represented by the card.
+                It can be one of the following: "†" (priest), "⚓" (captain), "⌂" (settler), or "†⚓⌂" (jack of all trades).
+
+        Returns:
+            None
         """
 
         super().__init__(price)
