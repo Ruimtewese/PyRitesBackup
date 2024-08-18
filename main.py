@@ -18,7 +18,6 @@ def main(players_from_input):
     Returns:
     None
     """
-
     # Start of Game
     folder_path = setup_game_environment()
     formatter = configure_logging(folder_path)

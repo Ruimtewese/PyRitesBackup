@@ -6,7 +6,7 @@ from src.constants import WINDOW_WIDTH, WINDOW_HEIGHT, BASE_FONT_SIZE, BUTTON, \
                             TEXTBOX_COLOUR_ACTIVE, TEXTBOX_COLOUR_INACTIVE
 
 from src.constants import SPLASH_TEXT, SPLASH_IMAGE
-from src.constants import PLAYER_TEXT, PLAYER_IMAGE
+from src.constants import PLAYER_TEXT, PLAYER_IMAGE, MENU_HEIGHT, MENU_WIDTH
 
 def init_pygame(window_title, icon_path):
     """
@@ -102,7 +102,7 @@ def splash_screen_window():
     window = init_pygame(SPLASH_TEXT, SPLASH_IMAGE)
     base_font = pygame.font.Font(None, BASE_FONT_SIZE)
     menu_items = MENU_ITEMS
-    menu_rects = [pygame.Rect(i * 100, 0, 100, 50) for i in range(len(menu_items))]
+    menu_rects = [pygame.Rect(i * MENU_WIDTH, 0, MENU_WIDTH, MENU_HEIGHT) for i in range(len(menu_items))]
     button = BUTTON_CENTER
     button_text = "Start"
 
@@ -150,10 +150,10 @@ def player_input():
     window = init_pygame(PLAYER_TEXT, PLAYER_IMAGE)
     base_font = pygame.font.Font(None, BASE_FONT_SIZE)
     menu_items = MENU_ITEMS
-    menu_rects = [pygame.Rect(i * 100, 0, 100, 50) for i in range(len(menu_items))]
+    menu_rects = [pygame.Rect(i * MENU_WIDTH, 0, MENU_WIDTH, MENU_HEIGHT) for i in range(len(menu_items))]
 
     textboxes = [pygame.Rect(200, 100 + i * 60, 400, 50) for i in range(5)]
-    labels = [f"Player {i+1}" for i in range(5)]
+    labels = [f"Captain {i+1}" for i in range(5)]
     player_names = ["", "", "", "", ""]
     active_textbox = 0
     button = BUTTON
