@@ -80,7 +80,7 @@ def draw_button(window, base_font, button, button_text, is_hovered):
     button_text_surface = base_font.render(button_text, True, WHITE)
     window.blit(button_text_surface, (button.x + 50, button.y + 10))
 
-def slash_screen_window():
+def splash_screen_window():
     """
     Initial screen before player input.
 
@@ -207,5 +207,5 @@ def player_input():
             running = False
 
 if __name__ == "__main__":
-    slash_screen_window()
+    splash_screen_window()
     player_input()

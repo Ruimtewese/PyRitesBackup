@@ -6,6 +6,7 @@ from src.players_setup import create_players
 from src.game_flow import play_game
 from src.func import clear_terminal
 from src.support_functions import splash_screen
+from src.ui import splash_screen_window, player_input
 
 def main():
     """
@@ -18,20 +19,18 @@ def main():
     Returns:
     None
     """
-
     # Start of Game
     folder_path = setup_game_environment()
     formatter = configure_logging(folder_path)
 
-    # Get number of players
-    number_of_players = 2  # Replace with user input if necessary
-
-    # Creating table and deck of cards
+    # Creating table, deck of cards and game
     table = Table()
     doc = DeckOfCards()
     doc.create_deck()
-
     game = Game(doc)
+
+    # Get number of players
+    number_of_players = 2  # Replace with user input if necessary
     temp_names = ["Rowland", "Divan"]
     players = create_players(number_of_players, temp_names, folder_path, formatter)
     for player in players:
@@ -46,6 +45,11 @@ def main():
     play_game(game, table, players)
 
 if __name__ == "__main__":
-    clear_terminal()
-    splash_screen()
+    # Terminal setup
+    clear_terminal() # Clear the terminal
+    splash_screen() # Display the terminal splash screen
+    # UI setup and start
+    splash_screen_window() # Display the splash screen window
+    player_input() # Get the player input
+    # Main game loop
     main()
