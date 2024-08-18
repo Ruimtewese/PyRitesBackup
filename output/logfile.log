@@ -1,189 +1,20 @@
-18-Aug-24 09:40:36 - INFO - Prepare the game
-18-Aug-24 09:40:36 - INFO - Table created
-18-Aug-24 09:40:36 - INFO - Deck of cards created, total number of cards 120
-18-Aug-24 09:40:36 - INFO - This is the logger file for player 1, Rowland
-18-Aug-24 09:40:36 - INFO - mo=money, vp=victory points, de=defences, di=discount, pe=permanant, te=temporary, , ca = cards, message
-18-Aug-24 09:40:36 - INFO - mo	vp	de	di	pe	te	ca	message
-18-Aug-24 09:40:36 - INFO - 3	0	0	0	0	0
-18-Aug-24 09:40:36 - INFO - This is the logger file for player 2, Divan
-18-Aug-24 09:40:36 - INFO - mo=money, vp=victory points, de=defences, di=discount, pe=permanant, te=temporary, , ca = cards, message
-18-Aug-24 09:40:36 - INFO - mo	vp	de	di	pe	te	ca	message
-18-Aug-24 09:40:36 - INFO - 3	0	0	0	0	0
-18-Aug-24 09:40:36 - INFO - Game started
-18-Aug-24 09:40:57 - INFO - ...card drawn: Rowland 	yellow 	ship 	+4m 	4a
-18-Aug-24 09:41:19 - INFO - ...card drawn: Rowland 	blue 	ship 	+1m 	1a
-18-Aug-24 09:41:25 - INFO - ...card drawn: Rowland 	sailor 	-3m 	+1vp
-18-Aug-24 09:41:33 - INFO - ...card drawn: Rowland 	sailor 	-3m 	+1vp
-18-Aug-24 09:41:34 - INFO - ...card drawn: Rowland 	 captain 	-4m 	+ 1vp
-18-Aug-24 09:41:36 - INFO - ...card drawn: Rowland 	 settler 	-4m 	+ 1vp
-18-Aug-24 09:41:36 - INFO - ...card drawn: Rowland 	witzbold 	-7m 	+2vp
-18-Aug-24 09:41:37 - INFO - ...card drawn: Rowland 	red 	ship 	+3m 	6a
-18-Aug-24 09:41:37 - INFO - ...card drawn: Rowland 	blue 	ship 	+2m 	2a
-18-Aug-24 09:41:37 - INFO - --->	Divan 	defeated by pirate ship
-18-Aug-24 09:41:37 - INFO - ---C	Witzbold check
-18-Aug-24 09:41:37 - INFO - --->	Divan 	 is the new start player
-18-Aug-24 09:41:51 - INFO - ...card drawn: Divan 	yellow 	ship 	+1m 	1a
-18-Aug-24 09:41:53 - INFO - ...card drawn: Divan 	black 	ship 	+3m 	7a
-18-Aug-24 09:42:55 - INFO - 6	0	0	0	0	0	Black ship (+Trader) 3 + 0
-18-Aug-24 09:42:55 - INFO - Divan took ship worth 3, and now have 6
-18-Aug-24 09:43:12 - INFO - --->	Rowland 	 is the new start player
-18-Aug-24 09:43:16 - INFO - ...card drawn: Rowland 	green 	ship 	+2m 	3a
-18-Aug-24 09:43:18 - INFO - ...card drawn: Rowland 	expidition
-18-Aug-24 09:43:18 - INFO - ---> Expedition moved to expedition area
-18-Aug-24 09:43:26 - INFO - ...card drawn: Rowland 	black 	ship 	+1m 	2a
-18-Aug-24 09:43:28 - INFO - ...card drawn: Rowland 	black 	ship 	+1m 	2a
-18-Aug-24 09:43:28 - INFO - --->	Divan 	defeated by pirate ship
-18-Aug-24 09:43:28 - INFO - ---C	Witzbold check
-18-Aug-24 09:43:28 - INFO - --->	Divan 	 is the new start player
-18-Aug-24 09:43:35 - INFO - ...card drawn: Divan 	blue 	ship 	+1m 	1a
-18-Aug-24 09:43:37 - INFO - ...card drawn: Divan 	red 	ship 	+2m 	3a
-18-Aug-24 09:43:39 - INFO - ...card drawn: Divan 	 settler 	-4m 	+ 1vp
-18-Aug-24 09:43:41 - INFO - ...card drawn: Divan 	 priest 	-4m 	+ 1vp
-18-Aug-24 09:43:43 - INFO - ...card drawn: Divan 	witzbold 	-9m 	+3vp
-18-Aug-24 09:43:58 - INFO - ...card drawn: Divan 	 settler 	-4m 	+ 1vp
-18-Aug-24 09:44:00 - INFO - ...card drawn: Divan 	blue 	ship 	+3m 	2a
-18-Aug-24 09:44:00 - INFO - --->	Divan 	defeated by pirate ship
-18-Aug-24 09:44:00 - INFO - ---C	Witzbold check
-18-Aug-24 09:44:00 - INFO - --->	Rowland 	 is the new start player
-18-Aug-24 09:44:03 - INFO - ...card drawn: Rowland 	blue 	ship 	+4m 	5a
-18-Aug-24 09:44:10 - INFO - 7	0	0	0	0	0	Blue ship (+Trader) 4 + 0
-18-Aug-24 09:44:10 - INFO - Rowland took ship worth 4, and now have 7
-18-Aug-24 09:44:15 - INFO - --->	Divan 	 is the new start player
-18-Aug-24 09:44:19 - INFO - ...card drawn: Divan 	red 	trader 	-3m 	+1vp
-18-Aug-24 09:44:23 - INFO - ...card drawn: Divan 	yellow 	ship 	+2m 	2a
-18-Aug-24 09:44:26 - INFO - ...card drawn: Divan 	expidition
-18-Aug-24 09:44:26 - INFO - ---> Expedition moved to expedition area
-18-Aug-24 09:44:28 - INFO - ...card drawn: Divan 	 priest 	-4m 	+ 1vp
-18-Aug-24 09:44:29 - INFO - ...card drawn: Divan 	blue 	ship 	+1m 	1a
-18-Aug-24 09:44:30 - INFO - ...card drawn: Divan 	green 	ship 	+2m 	3a
-18-Aug-24 09:44:47 - INFO - 8	0	0	0	0	0	Yellow ship (+Trader) 2 + 0
-18-Aug-24 09:44:47 - INFO - Divan took ship worth 2, and now have 8
-18-Aug-24 09:44:51 - INFO - 9	0	0	0	0	0	Green ship (+Trader) 2 + 0
-18-Aug-24 09:44:51 - INFO - 9	0	0	0	0	0	Subsequant player took a ship
-18-Aug-24 09:44:51 - INFO - 8	0	0	0	0	0	Ship (+Trader)
-18-Aug-24 09:44:51 - INFO - Rowland took ship worth 2, and now have 8
-18-Aug-24 09:44:51 - INFO - --->	Rowland 	 is the new start player
-18-Aug-24 09:44:55 - INFO - ...card drawn: Rowland 	yellow 	ship 	+1m 	1a
-18-Aug-24 09:44:58 - INFO - ...card drawn: Rowland 	governor 	-8m 	+0vp
-18-Aug-24 09:45:04 - INFO - 0	0	0	0	0	0	Functional card - governor
-18-Aug-24 09:45:04 - INFO - 0	0	0	0	1	0	Bought a Govenor for 8
-18-Aug-24 09:45:04 - INFO - Rowland took governor worth 0vp, and now have 0vp
-18-Aug-24 09:45:16 - INFO - 10	0	0	0	0	0	Yellow ship (+Trader) 1 + 0
-18-Aug-24 09:45:16 - INFO - 1	0	0	0	1	0	Subsequant player took a ship
-18-Aug-24 09:45:16 - INFO - -------------------- governor	
-18-Aug-24 09:45:16 - INFO - 9	0	0	0	0	0	Ship (+Trader)
-18-Aug-24 09:45:16 - INFO - Divan took ship worth 1, and now have 9
-18-Aug-24 09:45:16 - INFO - --->	Divan 	 is the new start player
-18-Aug-24 09:45:19 - INFO - ...card drawn: Divan 	red 	trader 	-3m 	+1vp
-18-Aug-24 09:45:20 - INFO - ...card drawn: Divan 	red 	ship 	+1m 	1a
-18-Aug-24 09:45:21 - INFO - ...card drawn: Divan 	 jack of all trades 	-6m 	+ 1vp
-18-Aug-24 09:45:24 - INFO - ...card drawn: Divan 	green 	trader 	-3m 	+1vp
-18-Aug-24 09:45:26 - INFO - ...card drawn: Divan 	 settler 	-4m 	+ 1vp
-18-Aug-24 09:45:28 - INFO - ...card drawn: Divan 	witzbold 	-7m 	+2vp
-18-Aug-24 09:45:36 - INFO - 2	0	0	0	0	0	Functional card - witzbold
-18-Aug-24 09:45:36 - INFO - Divan took witzbold worth 2vp, and now have 2vp
-18-Aug-24 09:45:49 - INFO - --->	Rowland 	 is the new start player
-18-Aug-24 09:45:52 - INFO - ...card drawn: Rowland 	sailor 	-3m 	+1vp
-18-Aug-24 09:45:55 - INFO - ...card drawn: Rowland 	sailor 	-5m 	+2vp
-18-Aug-24 09:45:56 - INFO - ...card drawn: Rowland 	 settler 	-4m 	+ 1vp
-18-Aug-24 09:45:57 - INFO - ...card drawn: Rowland 	tax 	min
-18-Aug-24 09:45:57 - INFO - 2	0	0	0	1	0	Tax for min vp
-18-Aug-24 09:45:57 - INFO - -------------------- governor	
-18-Aug-24 09:45:57 - INFO - --->	Rowland 	2m
-18-Aug-24 09:46:00 - INFO - ...card drawn: Rowland 	admiral 	-9m 	+3vp
-18-Aug-24 09:46:02 - INFO - ...card drawn: Rowland 	blue 	ship 	+3m 	5a
-18-Aug-24 09:46:10 - INFO - 5	0	0	0	1	0	Blue ship (+Trader) 3 + 0
-18-Aug-24 09:46:10 - INFO - -------------------- governor	
-18-Aug-24 09:46:10 - INFO - Rowland took ship worth 3, and now have 5
-18-Aug-24 09:46:26 - INFO - Rowland selected invalid card from table
-18-Aug-24 09:46:36 - INFO - --->	Divan 	 is the new start player
-18-Aug-24 09:46:40 - INFO - ...card drawn: Divan 	blue 	ship 	+2m 	2a
-18-Aug-24 09:46:43 - INFO - ...card drawn: Divan 	black 	ship 	+4m 	100a
-18-Aug-24 09:46:47 - INFO - 6	2	0	0	0	0	Black ship (+Trader) 4 + 0
-18-Aug-24 09:46:47 - INFO - -------------------- witzbold	
-18-Aug-24 09:46:47 - INFO - Divan took ship worth 4, and now have 6
-18-Aug-24 09:46:53 - INFO - 7	0	0	0	1	0	Blue ship (+Trader) 2 + 0
-18-Aug-24 09:46:53 - INFO - -------------------- governor	
-18-Aug-24 09:46:53 - INFO - 7	2	0	0	0	0	Subsequant player took a ship
-18-Aug-24 09:46:53 - INFO - -------------------- witzbold	
-18-Aug-24 09:46:53 - INFO - 6	0	0	0	1	0	Ship (+Trader)
-18-Aug-24 09:46:53 - INFO - -------------------- governor	
-18-Aug-24 09:46:53 - INFO - Rowland took ship worth 2, and now have 6
-18-Aug-24 09:46:55 - INFO - --->	Rowland 	 is the new start player
-18-Aug-24 09:46:58 - INFO - ...card drawn: Rowland 	 captain 	-4m 	+ 1vp
-18-Aug-24 09:47:08 - INFO - ...card drawn: Rowland 	 captain 	-4m 	+ 1vp
-18-Aug-24 09:47:09 - INFO - ...card drawn: Rowland 	 priest 	-4m 	+ 1vp
-18-Aug-24 09:47:10 - INFO - ...card drawn: Rowland 	red 	ship 	+1m 	1a
-18-Aug-24 09:47:11 - INFO - ...card drawn: Rowland 	witzbold 	-7m 	+2vp
-18-Aug-24 09:47:12 - INFO - ...card drawn: Rowland 	vrou 	-9m 	+3vp
-18-Aug-24 09:47:14 - INFO - ...card drawn: Rowland 	sailor 	-9m 	+3vp
-18-Aug-24 09:47:15 - INFO - ...card drawn: Rowland 	black 	ship 	+1m 	2a
-18-Aug-24 09:47:16 - INFO - ...card drawn: Rowland 	green 	trader 	-3m 	+1vp
-18-Aug-24 09:47:17 - INFO - ...card drawn: Rowland 	red 	ship 	+4m 	100a
-18-Aug-24 09:47:17 - INFO - --->	Divan 	defeated by pirate ship
-18-Aug-24 09:47:17 - INFO - ---C	Witzbold check
-18-Aug-24 09:47:17 - INFO - --->	Divan 	 is the new start player
-18-Aug-24 09:47:19 - INFO - ...card drawn: Divan 	sailor 	-5m 	+2vp
-18-Aug-24 09:47:20 - INFO - ...card drawn: Divan 	admiral 	-5m 	+1vp
-18-Aug-24 09:47:21 - INFO - ...card drawn: Divan 	tax 	max
-18-Aug-24 09:47:21 - INFO - 7	0	0	0	1	0	Tax for max defence
-18-Aug-24 09:47:21 - INFO - -------------------- governor	
-18-Aug-24 09:47:21 - INFO - --->	Rowland 	7m
-18-Aug-24 09:47:21 - INFO - 8	2	0	0	0	0	Tax for max defence
-18-Aug-24 09:47:21 - INFO - -------------------- witzbold	
-18-Aug-24 09:47:21 - INFO - --->	Divan 	8m
-18-Aug-24 09:47:26 - INFO - ...card drawn: Divan 	yellow 	ship 	+2m 	1a
-18-Aug-24 09:47:34 - INFO - 10	2	0	0	0	0	Yellow ship (+Trader) 2 + 0
-18-Aug-24 09:47:34 - INFO - -------------------- witzbold	
-18-Aug-24 09:47:34 - INFO - Divan took ship worth 2, and now have 10
-18-Aug-24 09:47:37 - INFO - --->	Rowland 	 is the new start player
-18-Aug-24 09:47:40 - INFO - ...card drawn: Rowland 	blue 	trader 	-3m 	+1vp
-18-Aug-24 09:47:42 - INFO - ...card drawn: Rowland 	red 	ship 	+3m 	100a
-18-Aug-24 09:47:47 - INFO - 10	0	0	0	1	0	Red ship (+Trader) 3 + 0
-18-Aug-24 09:47:47 - INFO - -------------------- governor	
-18-Aug-24 09:47:47 - INFO - Rowland took ship worth 3, and now have 10
-18-Aug-24 09:47:50 - INFO - --->	Divan 	 is the new start player
-18-Aug-24 09:47:52 - INFO - ...card drawn: Divan 	green 	ship 	+1m 	1a
-18-Aug-24 09:47:55 - INFO - ...card drawn: Divan 	black 	ship 	+2m 	4a
-18-Aug-24 09:47:56 - INFO - ...card drawn: Divan 	expidition
-18-Aug-24 09:47:56 - INFO - ---> Expedition moved to expedition area
-18-Aug-24 09:47:58 - INFO - ...card drawn: Divan 	red 	ship 	+1m 	1a
-18-Aug-24 09:48:01 - INFO - ...card drawn: Divan 	green 	ship 	+2m 	1a
-18-Aug-24 09:48:01 - INFO - --->	Divan 	defeated by pirate ship
-18-Aug-24 09:48:01 - INFO - ---C	Witzbold check
-18-Aug-24 09:48:01 - INFO - --->	Rowland 	 is the new start player
-18-Aug-24 09:48:04 - INFO - ...card drawn: Rowland 	yellow 	trader 	-3m 	+1vp
-18-Aug-24 09:48:05 - INFO - ...card drawn: Rowland 	 captain 	-4m 	+ 1vp
-18-Aug-24 09:48:05 - INFO - ...card drawn: Rowland 	admiral 	-7m 	+2vp
-18-Aug-24 09:48:13 - INFO - 3	0	0	0	1	0	Functional card - admiral
-18-Aug-24 09:48:13 - INFO - -------------------- governor	
-18-Aug-24 09:48:13 - INFO - Rowland took admiral worth 2vp, and now have 2vp
-18-Aug-24 09:48:22 - INFO - Rowland selected invalid card from table
-18-Aug-24 09:48:34 - INFO - --->	Divan 	 is the new start player
-18-Aug-24 09:48:37 - INFO - ...card drawn: Divan 	black 	ship 	+2m 	4a
-18-Aug-24 09:48:38 - INFO - ...card drawn: Divan 	sailor 	-3m 	+1vp
-18-Aug-24 09:48:39 - INFO - ...card drawn: Divan 	admiral 	-7m 	+2vp
-18-Aug-24 09:48:45 - INFO - 3	2	0	0	0	0	Functional card - admiral
-18-Aug-24 09:48:45 - INFO - -------------------- witzbold	
-18-Aug-24 09:48:45 - INFO - Divan took admiral worth 2vp, and now have 4vp
-18-Aug-24 09:48:48 - INFO - 5	2	0	0	1	0	Black ship (+Trader) 2 + 0
-18-Aug-24 09:48:48 - INFO - -------------------- governor	
-18-Aug-24 09:48:48 - INFO - -------------------- admiral	
-18-Aug-24 09:48:48 - INFO - 4	4	0	0	0	0	Subsequant player took a ship
-18-Aug-24 09:48:48 - INFO - -------------------- witzbold	
-18-Aug-24 09:48:48 - INFO - -------------------- admiral	
-18-Aug-24 09:48:48 - INFO - 4	2	0	0	1	0	Ship (+Trader)
-18-Aug-24 09:48:48 - INFO - -------------------- governor	
-18-Aug-24 09:48:48 - INFO - -------------------- admiral	
-18-Aug-24 09:48:48 - INFO - Rowland took ship worth 2, and now have 4
-18-Aug-24 09:48:51 - INFO - --->	Rowland 	 is the new start player
-18-Aug-24 09:48:59 - INFO - ...card drawn: Rowland 	green 	ship 	+4m 	5a
-18-Aug-24 09:49:03 - INFO - 8	2	0	0	1	0	Green ship (+Trader) 4 + 0
-18-Aug-24 09:49:03 - INFO - -------------------- governor	
-18-Aug-24 09:49:03 - INFO - -------------------- admiral	
-18-Aug-24 09:49:03 - INFO - Rowland took ship worth 4, and now have 8
-18-Aug-24 09:49:07 - INFO - --->	Divan 	 is the new start player
-18-Aug-24 09:49:10 - INFO - ...card drawn: Divan 	witzbold 	-5m 	+3vp
-18-Aug-24 09:49:11 - INFO - ...card drawn: Divan 	expidition
-18-Aug-24 09:49:11 - INFO - ---> Expedition moved to expedition area
-18-Aug-24 09:49:12 - INFO - ...card drawn: Divan 	vrou 	-9m 	+3vp
+18-Aug-24 18:04:36 - INFO - This is the logger file for player 1, Rowland
+18-Aug-24 18:04:36 - INFO - mo=money, vp=victory points, de=defences, di=discount, pe=permanent, te=temporary, ca=cards, message
+18-Aug-24 18:04:36 - INFO - 3	0	0	0	0	0
+18-Aug-24 18:04:36 - INFO - This is the logger file for player 2, Divan
+18-Aug-24 18:04:36 - INFO - mo=money, vp=victory points, de=defences, di=discount, pe=permanent, te=temporary, ca=cards, message
+18-Aug-24 18:04:36 - INFO - 3	0	0	0	0	0
+18-Aug-24 18:04:40 - INFO - ...card drawn: Rowland 	sailor 	-3m 	+1vp
+18-Aug-24 18:04:41 - INFO - ...card drawn: Rowland 	 captain 	-4m 	+ 1vp
+18-Aug-24 18:04:42 - INFO - ...card drawn: Rowland 	sailor 	-5m 	+2vp
+18-Aug-24 18:04:42 - INFO - ...card drawn: Rowland 	green 	ship 	+1m 	1a
+18-Aug-24 18:04:43 - INFO - ...card drawn: Rowland 	sailor 	-3m 	+1vp
+18-Aug-24 18:04:44 - INFO - ...card drawn: Rowland 	vrou 	-7m 	+2vp
+18-Aug-24 18:04:44 - INFO - ...card drawn: Rowland 	 jack of all trades 	-6m 	+ 1vp
+18-Aug-24 18:04:46 - INFO - ...card drawn: Rowland 	yellow 	trader 	-5m 	+2vp
+18-Aug-24 18:04:56 - INFO - 4	0	0	0	0	0	Green ship (+Trader) 1 + 0
+18-Aug-24 18:04:56 - INFO - Rowland took ship worth 1, and now have 4
+18-Aug-24 18:05:00 - INFO - --->	Divan 	 is the new start player
+18-Aug-24 18:05:03 - INFO - ...card drawn: Divan 	admiral 	-9m 	+3vp
+18-Aug-24 18:05:04 - INFO - ...card drawn: Divan 	witzbold 	-9m 	+3vp
+18-Aug-24 18:05:05 - INFO - ...card drawn: Divan 	yellow 	ship 	+4m 	4a

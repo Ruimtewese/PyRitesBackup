@@ -5,11 +5,20 @@ import datetime
 from src.players import Player
 from termcolor import colored as tc # Import termcolor module
 
-def clear_log_files(folder_path: str, files):
-    """Funnction to clear all *.log files in a given directory
+def clear_log_files(folder_path: str, files) -> None:
+    """
+    Clear all *.log files in a given directory.
+
+    This function iterates through the provided collection of files and checks if each file
+    has a '.log' extension. If a '.log' file is found, it constructs the full file path using
+    the provided folder path and the file name, and then removes the file.
+
     Args:
-        folder_path (str): foldr path
-        files (collection of files): all the files in this locations
+        folder_path (str): The path to the directory where the log files are located.
+        files (collection of files): A collection of file names in the specified directory.
+
+    Returns:
+        None: The function does not return any value. It only prints a message indicating that all log files have been cleared.
     """
 
     # Iterate through the files and delete *.log files
@@ -21,12 +30,15 @@ def clear_log_files(folder_path: str, files):
     print("Clear all log files")
 
 def my_logger(a_player:Player, message = "")-> None:
-    """Simple function to do logging to specific players logger
+    """
+    Simple function to do logging to specific players logger.
 
     Args:
-        index (int): Player index number
-        a_player (Player): The player
-        message (str): _description_
+        a_player (Player): The player object for which the logging is being done.
+        message (str): An optional message to be logged along with the player's data. Default is an empty string.
+
+    Returns:
+        None: The function does not return any value. It logs the player's data and any provided message to a specific logger.
     """
     
     current_date = datetime.datetime.now().strftime("%Y-%m-%d")
@@ -49,6 +61,16 @@ def my_logger(a_player:Player, message = "")-> None:
 
 def splash_screen():
     """
+    Display a splash screen with a stylized game title using the termcolor module.
+
+    The splash screen displays a visually appealing ASCII art representation of the game title.
+    The title is printed in red color using the termcolor module.
+
+    Parameters:
+    None
+
+    Returns:
+    None
     """     
     print(tc("██████╗░██╗░░░██╗██████╗░░█████╗░████████╗███████╗░██████╗", color="red"))
     print(tc("██╔══██╗╚██╗░██╔╝██╔══██╗██╔══██╗╚══██╔══╝██╔════╝██╔════╝", color="red"))
@@ -60,14 +82,19 @@ def splash_screen():
 
 
 def print_color(message, color1):
-    """Available text colors:
-    black, red, green, yellow, blue, magenta, cyan, white, light_magenta, light_cyan,
-      light_grey,dark_grey, light_red, light_green, light_yellow, light_blue 
+    """
+    Print a colored message to the console using the termcolor module.
 
-Available text highlights:
-    on_black, on_red, on_green, on_yellow, on_blue, on_magenta, on_cyan, on_white,
-      on_light_grey, on_dark_grey, on_light_red, on_light_green, on_light_yellow,
-       on_light_blue, on_light_magenta, on_light_cyan.
+    This function takes a message and a color as input and prints the message to the console
+    in the specified color using the termcolor module.
+
+    Parameters:
+    message (str): The text message to be printed.
+    color1 (str): The color in which the message should be printed. The color should be one of the
+        available text colors or highlights provided by the termcolor module.
+
+    Returns:
+    None: The function does not return any value. It only prints the colored message to the console.
     """
     print(tc(message, color=color1))
         
