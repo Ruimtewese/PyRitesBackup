@@ -1,0 +1,34 @@
+2024-08-18 09:40:36,169 - INFO - This is the logger file for player 1, Rowland
+2024-08-18 09:40:36,170 - INFO - mo=money, vp=victory points, de=defences, di=discount, pe=permanant, te=temporary, , ca = cards, message
+2024-08-18 09:40:36,170 - INFO - mo	vp	de	di	pe	te	ca	message
+2024-08-18 09:40:36,170 - INFO - 3	0	0	0	0	0
+2024-08-18 09:44:10,488 - INFO - 7	0	0	0	0	0	Blue ship (+Trader) 4 + 0
+2024-08-18 09:44:51,801 - INFO - 9	0	0	0	0	0	Green ship (+Trader) 2 + 0
+2024-08-18 09:44:51,801 - INFO - 8	0	0	0	0	0	Ship (+Trader)
+2024-08-18 09:45:04,944 - INFO - 0	0	0	0	0	0	Functional card - governor
+2024-08-18 09:45:04,945 - INFO - 0	0	0	0	1	0	Bought a Govenor for 8
+2024-08-18 09:45:16,061 - INFO - 1	0	0	0	1	0	Subsequant player took a ship
+2024-08-18 09:45:16,061 - INFO - -------------------- governor	
+2024-08-18 09:45:57,297 - INFO - 2	0	0	0	1	0	Tax for min vp
+2024-08-18 09:45:57,297 - INFO - -------------------- governor	
+2024-08-18 09:46:10,416 - INFO - 5	0	0	0	1	0	Blue ship (+Trader) 3 + 0
+2024-08-18 09:46:10,417 - INFO - -------------------- governor	
+2024-08-18 09:46:53,352 - INFO - 7	0	0	0	1	0	Blue ship (+Trader) 2 + 0
+2024-08-18 09:46:53,353 - INFO - -------------------- governor	
+2024-08-18 09:46:53,353 - INFO - 6	0	0	0	1	0	Ship (+Trader)
+2024-08-18 09:46:53,353 - INFO - -------------------- governor	
+2024-08-18 09:47:21,161 - INFO - 7	0	0	0	1	0	Tax for max defence
+2024-08-18 09:47:21,161 - INFO - -------------------- governor	
+2024-08-18 09:47:47,520 - INFO - 10	0	0	0	1	0	Red ship (+Trader) 3 + 0
+2024-08-18 09:47:47,521 - INFO - -------------------- governor	
+2024-08-18 09:48:13,681 - INFO - 3	0	0	0	1	0	Functional card - admiral
+2024-08-18 09:48:13,681 - INFO - -------------------- governor	
+2024-08-18 09:48:48,216 - INFO - 5	2	0	0	1	0	Black ship (+Trader) 2 + 0
+2024-08-18 09:48:48,216 - INFO - -------------------- governor	
+2024-08-18 09:48:48,216 - INFO - -------------------- admiral	
+2024-08-18 09:48:48,217 - INFO - 4	2	0	0	1	0	Ship (+Trader)
+2024-08-18 09:48:48,217 - INFO - -------------------- governor	
+2024-08-18 09:48:48,217 - INFO - -------------------- admiral	
+2024-08-18 09:49:03,285 - INFO - 8	2	0	0	1	0	Green ship (+Trader) 4 + 0
+2024-08-18 09:49:03,285 - INFO - -------------------- governor	
+2024-08-18 09:49:03,286 - INFO - -------------------- admiral	
