@@ -1,10 +1,6 @@
-18-Aug-24 18:17:59 - INFO - This is the logger file for player 1, Rowland
-18-Aug-24 18:17:59 - INFO - mo=money, vp=victory points, de=defences, di=discount, pe=permanent, te=temporary, ca=cards, message
-18-Aug-24 18:17:59 - INFO - 3	0	0	0	0	0
-18-Aug-24 18:17:59 - INFO - This is the logger file for player 2, Divan
-18-Aug-24 18:17:59 - INFO - mo=money, vp=victory points, de=defences, di=discount, pe=permanent, te=temporary, ca=cards, message
-18-Aug-24 18:17:59 - INFO - 3	0	0	0	0	0
-18-Aug-24 18:18:13 - INFO - ...card drawn: Rowland 	sailor 	-3m 	+1vp
-18-Aug-24 18:18:14 - INFO - ...card drawn: Rowland 	sailor 	-3m 	+1vp
-18-Aug-24 18:18:14 - INFO - ...card drawn: Rowland 	sailor 	-3m 	+1vp
-18-Aug-24 18:18:14 - INFO - ...card drawn: Rowland 	admiral 	-9m 	+3vp
+18-Aug-24 19:26:12 - INFO - This is the logger file for player 1, Rowland
+18-Aug-24 19:26:12 - INFO - mo=money, vp=victory points, de=defences, di=discount, pe=permanent, te=temporary, ca=cards, message
+18-Aug-24 19:26:12 - INFO - 3	0	0	0	0	0
+18-Aug-24 19:26:12 - INFO - This is the logger file for player 2, Divan
+18-Aug-24 19:26:12 - INFO - mo=money, vp=victory points, de=defences, di=discount, pe=permanent, te=temporary, ca=cards, message
+18-Aug-24 19:26:12 - INFO - 3	0	0	0	0	0

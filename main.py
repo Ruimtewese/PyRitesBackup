@@ -8,17 +8,17 @@ from src.func import clear_terminal
 from src.support_functions import splash_screen
 from src.ui import splash_screen_window, player_input
 
-def main():
+def main(players_from_input):
     """
-    The main function orchestrates the game flow, including setting up the game, handling player turns, 
-    and managing the game state. It also includes logging and user interaction.
+    The main function orchestrates the game setup, player creation, game initialization, and game execution.
 
     Parameters:
-    None
+    players_from_input (list): A list of player names obtained from user input.
 
     Returns:
     None
     """
+
     # Start of Game
     folder_path = setup_game_environment()
     formatter = configure_logging(folder_path)
@@ -26,12 +26,15 @@ def main():
     # Creating table, deck of cards and game
     table = Table()
     doc = DeckOfCards()
-    doc.create_deck()
+    doc.create_deck() 
     game = Game(doc)
 
-    # Get number of players
-    number_of_players = 2  # Replace with user input if necessary
-    temp_names = ["Rowland", "Divan"]
+    # Get number of players from the filtered list
+    filtered_list = [item for item in players_from_input if item != '']
+    number_of_players = len(filtered_list)  # Replace with user input if necessary
+    print(filtered_list)
+    temp_names = filtered_list
+
     players = create_players(number_of_players, temp_names, folder_path, formatter)
     for player in players:
         game.add_player(player)
@@ -50,6 +53,6 @@ if __name__ == "__main__":
     splash_screen() # Display the terminal splash screen
     # UI setup and start
     splash_screen_window() # Display the splash screen window
-    player_input() # Get the player input
+    players = player_input() # Get the player input
     # Main game loop
-    main()
+    main(players)

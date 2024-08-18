@@ -4,6 +4,11 @@ from src.func import (report_drawn_card, end_of_round, tax_card_is_drawn, expedi
                       ship_card_is_drawn, is_valid_card_on_table, select_card_from_table, 
                       check_ship_amount, admiral_check, check_expedition)
 from src.func import clear_terminal
+import pygame
+from src.ui import init_pygame
+from src.constants import WINDOW_WIDTH, WINDOW_HEIGHT, BASE_FONT_SIZE, BUTTON, MENU_ITEMS, \
+    MENU_COLOUR, MENU_ITEM_HOVER_COLOUR, BUTTON_COLOUR, BUTTON_HOVER_COLOUR, WHITE, \
+    TEXTBOX_COLOUR_ACTIVE, TEXTBOX_COLOUR_INACTIVE
 
 def play_game(game, table, players):
     """
@@ -14,6 +19,12 @@ def play_game(game, table, players):
     table (Table): The Table object.
     players (list): List of Player objects.
     """
+    window = init_pygame("Playing table", 'images/port_royal.png')
+    base_font = pygame.font.Font(None, BASE_FONT_SIZE)
+    menu_items = MENU_ITEMS
+    menu_rects = [pygame.Rect(i * 100, 0, 100, 50) for i in range(len(menu_items))]
+    window.fill((0, 0, 0))
+
     print(f"Active player: {game.players[0].name} press 'enter' to draw a card")
     playing = True
     while playing:

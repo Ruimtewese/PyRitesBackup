@@ -1,19 +1,12 @@
 import pygame
 import sys
-import os
+from src.constants import WINDOW_WIDTH, WINDOW_HEIGHT, BASE_FONT_SIZE, BUTTON, \
+                            BUTTON_CENTER, MENU_ITEMS, MENU_COLOUR, MENU_ITEM_HOVER_COLOUR, \
+                            BUTTON_COLOUR, BUTTON_HOVER_COLOUR, WHITE, \
+                            TEXTBOX_COLOUR_ACTIVE, TEXTBOX_COLOUR_INACTIVE
 
-# Constants
-WINDOW_WIDTH, WINDOW_HEIGHT = 1400, 900
-BASE_FONT_SIZE = 36
-BUTTON = pygame.Rect(300, 500, 200, 50)
-MENU_ITEMS = ["File", "Edit", "Help"]
-MENU_COLOUR = (30, 30, 30)
-MENU_ITEM_HOVER_COLOUR = (50, 50, 50)
-BUTTON_COLOUR = (0, 200, 0)
-BUTTON_HOVER_COLOUR = (0, 255, 0)
-WHITE = (255, 255, 255)
-TEXTBOX_COLOUR_ACTIVE = (0, 255, 255)
-TEXTBOX_COLOUR_INACTIVE = (50, 50, 50)
+from src.constants import SPLASH_TEXT, SPLASH_IMAGE
+from src.constants import PLAYER_TEXT, PLAYER_IMAGE
 
 def init_pygame(window_title, icon_path):
     """
@@ -78,7 +71,20 @@ def draw_button(window, base_font, button, button_text, is_hovered):
     button_colour = BUTTON_HOVER_COLOUR if is_hovered else BUTTON_COLOUR
     pygame.draw.rect(window, button_colour, button)
     button_text_surface = base_font.render(button_text, True, WHITE)
-    window.blit(button_text_surface, (button.x + 50, button.y + 10))
+
+
+    # Get the text and button dimensions
+    text_width, text_height = button_text_surface.get_size()
+    button_width, button_height = button.size
+
+    # Calculate the position to centre the text
+    text_x = button.x + (button_width - text_width) // 2
+    text_y = button.y + (button_height - text_height) // 2
+
+    # Draw the text on the button
+    window.blit(button_text_surface, (text_x, text_y))
+
+    #window.blit(button_text_surface, (button.x + 50, button.y + 10))
 
 def splash_screen_window():
     """
@@ -93,12 +99,17 @@ def splash_screen_window():
     Returns:
     None
     """
-    window = init_pygame("Welcome to PyRites", 'images/port_royal.png')
+    window = init_pygame(SPLASH_TEXT, SPLASH_IMAGE)
     base_font = pygame.font.Font(None, BASE_FONT_SIZE)
     menu_items = MENU_ITEMS
     menu_rects = [pygame.Rect(i * 100, 0, 100, 50) for i in range(len(menu_items))]
-    button = BUTTON
+    button = BUTTON_CENTER
     button_text = "Start"
+
+    # Load the image
+    image = pygame.image.load(SPLASH_IMAGE)  # Update with your image path
+    image_rect = image.get_rect(center=(window.get_width() // 2, window.get_height() // 2))
+
 
     running = True
     while running:
@@ -118,33 +129,48 @@ def splash_screen_window():
 
         window.fill((0, 0, 0))
         draw_menu(window, base_font, menu_items, menu_rects)
+        window.blit(image, image_rect)  # Draw the image on the window
         draw_button(window, base_font, button, button_text, button.collidepoint(pygame.mouse.get_pos()))
         pygame.display.update()
 
 def player_input():
     """
-    Get player names and confirm.
-
-    This function initializes a game window, displays a menu, and textboxes for player names.
-    It handles user input for menu item selection, textbox focus, and button click events.
-    When the 'Confirm' button is clicked, it writes the non-empty player names to a file and prints the number of players.
+    This function handles the player name input window. It displays a series of textboxes for the players to enter their names,
+    and a confirm button to proceed. The function also handles user input, such as keyboard events and mouse clicks, to update
+    the textbox contents and trigger the confirm action.
 
     Parameters:
     None
 
     Returns:
-    None
+    list: A list of strings representing the player names entered by the user. The list may contain empty strings if the user
+          did not enter a name for a particular player.
     """
-    window = init_pygame("Player name input", 'images/port_royal.png')
+
+    window = init_pygame(PLAYER_TEXT, PLAYER_IMAGE)
     base_font = pygame.font.Font(None, BASE_FONT_SIZE)
     menu_items = MENU_ITEMS
     menu_rects = [pygame.Rect(i * 100, 0, 100, 50) for i in range(len(menu_items))]
-    textboxes = [pygame.Rect(300, 100 + i * 60, 400, 50) for i in range(5)]
+
+    textboxes = [pygame.Rect(200, 100 + i * 60, 400, 50) for i in range(5)]
     labels = [f"Player {i+1}" for i in range(5)]
     player_names = ["", "", "", "", ""]
     active_textbox = 0
     button = BUTTON
     button_text = "Confirm"
+
+    # Load the image
+    image = pygame.image.load(PLAYER_IMAGE)  # Update with your image path
+    image = pygame.transform.scale(image, (image.get_width() // 3, image.get_height() // 3))
+
+    # Calculate image rectangle position for top-right corner
+    image_rect = image.get_rect(
+        topright=(window.get_width() - 10, 10))  # Adjust the position slightly from the edges
+    
+    # image_rect = image.get_rect(center=(window.get_width() // 2, window.get_height() // 2))
+
+    warning_text = ""
+    warning_font = pygame.font.Font(None, 24)  # Font for warning message
 
     confirmed = False
     running = True
@@ -165,9 +191,14 @@ def player_input():
                         active_textbox = i
 
                 if button.collidepoint(event.pos):
-                    confirmed = True
+                    non_empty_names = [name for name in player_names if name.strip()]
+                    if len(non_empty_names) >= 2:
+                        confirmed = True
+                    else:
+                        warning_text = "Please enter at least two player names."
 
             if event.type == pygame.KEYDOWN and not confirmed:
+                warning_text = ""
                 if active_textbox < len(player_names):
                     if event.key == pygame.K_TAB:
                         active_textbox = (active_textbox + 1) % len(textboxes)
@@ -181,6 +212,7 @@ def player_input():
 
         window.fill((0, 0, 0))
         draw_menu(window, base_font, menu_items, menu_rects)
+        window.blit(image, image_rect)  # Draw the image on the window
         for i, textbox in enumerate(textboxes):
             pygame.draw.rect(window, TEXTBOX_COLOUR_ACTIVE if i == active_textbox else TEXTBOX_COLOUR_INACTIVE, textbox)
             label_surface = base_font.render(labels[i], True, WHITE)
@@ -188,11 +220,15 @@ def player_input():
             text_surface = base_font.render(player_names[i], True, WHITE)
             window.blit(text_surface, (textbox.x + 5, textbox.y + 10))
         draw_button(window, base_font, button, button_text, button.collidepoint(pygame.mouse.get_pos()))
+
+        # Display the warning message if needed
+        if warning_text:
+            warning_surface = warning_font.render(warning_text, True, (255, 0, 0))  # Red colour for warning
+            window.blit(warning_surface, (200, 450))
+
         pygame.display.update()
 
         if confirmed:
-            non_empty_names = [name for name in player_names if name.strip()]
-            os.makedirs('output', exist_ok=True)  # Ensure the output directory exists
             try:
                 with open('output/player_names.txt', 'w') as f:
                     for name in non_empty_names:
@@ -201,10 +237,10 @@ def player_input():
             except IOError as e:
                 print(f"Failed to write to file: {e}")
 
-            window.fill((0, 0, 0))
-            pygame.display.update()
-            pygame.time.wait(2000)
+            pygame.quit()  # Close Pygame
             running = False
+
+    return player_names
 
 if __name__ == "__main__":
     splash_screen_window()
