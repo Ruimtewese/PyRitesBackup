@@ -1,5 +1,6 @@
 import pygame
 import sys
+
 from src.constants import WINDOW_WIDTH, WINDOW_HEIGHT, BASE_FONT_SIZE, BUTTON, \
                             BUTTON_CENTER, MENU_ITEMS, MENU_COLOUR, MENU_ITEM_HOVER_COLOUR, \
                             BUTTON_COLOUR, BUTTON_HOVER_COLOUR, WHITE, \
@@ -7,6 +8,9 @@ from src.constants import WINDOW_WIDTH, WINDOW_HEIGHT, BASE_FONT_SIZE, BUTTON, \
 
 from src.constants import SPLASH_TEXT, SPLASH_IMAGE
 from src.constants import PLAYER_TEXT, PLAYER_IMAGE, MENU_HEIGHT, MENU_WIDTH
+from src.constants import GAME_TEXT, GAME_IMAGE, BASE_FONT_SIZE_HALF, MENU_HEIGHT, MENU_WIDTH
+from src.constants import TABLE_MARGIN, IMAGE_TOP_RIGHT
+from src.players import Player
 
 def init_pygame(window_title, icon_path):
     """
@@ -110,7 +114,6 @@ def splash_screen_window():
     image = pygame.image.load(SPLASH_IMAGE)  # Update with your image path
     image_rect = image.get_rect(center=(window.get_width() // 2, window.get_height() // 2))
 
-
     running = True
     while running:
         for event in pygame.event.get():
@@ -123,6 +126,9 @@ def splash_screen_window():
                 for i, rect in enumerate(menu_rects):
                     if rect.collidepoint(mouse_pos):
                         print(f"{menu_items[i]} menu clicked!")
+                        if menu_items[i] == "Quit":
+                            pygame.quit()  # Quit Pygame
+                            sys.exit()  # Exit the program
 
                 if button.collidepoint(mouse_pos):
                     running = False
@@ -185,6 +191,9 @@ def player_input():
                 for i, rect in enumerate(menu_rects):
                     if rect.collidepoint(mouse_pos):
                         print(f"{menu_items[i]} menu clicked!")
+                        if menu_items[i] == "Quit":
+                            pygame.quit()  # Quit Pygame
+                            sys.exit()  # Exit the program
 
                 for i, textbox in enumerate(textboxes):
                     if textbox.collidepoint(event.pos):
@@ -242,6 +251,135 @@ def player_input():
 
     return player_names
 
+def game_board(players):
+    """
+    This function is responsible for managing the gameplay screen. It draws various elements such as the game image,
+    horizontal and vertical lines, expedition box, player labels, and vertical lines for player positions.
+
+    Parameters:
+    None
+
+    Returns:
+    None
+    """
+ 
+    window = init_pygame(GAME_TEXT, GAME_IMAGE)
+    base_font = pygame.font.Font(None, BASE_FONT_SIZE)
+    menu_items = MENU_ITEMS
+    menu_rects = [pygame.Rect(i * MENU_WIDTH, 0, MENU_WIDTH, MENU_HEIGHT) for i in range(len(menu_items))]
+
+    # Load the image & Calculate image rectangle position for top-right corner
+    image = pygame.image.load(GAME_IMAGE)  # Update with your image path
+    image = pygame.transform.scale(image, (image.get_width() // 3, image.get_height() // 3))
+    image_rect = image.get_rect(topright=IMAGE_TOP_RIGHT)  # Adjust the position slightly from the edges
+    window.fill((0, 0, 0))
+    draw_menu(window, base_font, menu_items, menu_rects)
+    window.blit(image, image_rect)  # Draw the image on the window
+
+    # Draw horizontal white line in the center of the screen
+    center_y = window.get_height() // 2
+    horizontal_line = pygame.draw.line(window, (255, 255, 255), (TABLE_MARGIN, center_y), (window.get_width() - TABLE_MARGIN, center_y), 2)
+
+    # Draw vertical white line from the left edge of the image to the horizontal line
+    image_left_y = image_rect.top + image_rect.height + TABLE_MARGIN
+    pygame.draw.line(window, (255, 255, 255), (image_rect.left, image_left_y), (image_rect.left, center_y - TABLE_MARGIN), 2)
+
+    # Render and draw the expedition box heading
+    text_font = pygame.font.Font(None, BASE_FONT_SIZE_HALF)  # Font size 36 for "Expeditions"
+    text_surf = text_font.render("Expeditions", True, (255, 255, 255))  # Render the text
+    text_rect = text_surf.get_rect(midtop=(image_rect.left + image_rect.width // 2, image_rect.bottom + TABLE_MARGIN))  # Centered below the image
+    window.blit(text_surf, text_rect)  # Draw the text on the window
+
+    # Draw six grey rectangles in two rows of three, equally spaced between the first vertical line and the edge of the screen
+    # First calculate the width of each rectangle given the number of columns
+    num_columns = 3
+    total_width_available = window.get_width() - image_rect.left - (2 * TABLE_MARGIN) - ((num_columns - 1) * TABLE_MARGIN)
+    width_per_column = total_width_available / num_columns   
+    num_rows = 2
+    total_height_available = horizontal_line.top - text_rect.bottom - (2 * TABLE_MARGIN) - ((num_rows - 1) * TABLE_MARGIN)
+    height_per_row = total_height_available / num_rows
+    first_x = image_rect.left + TABLE_MARGIN
+    first_y = text_rect.bottom + TABLE_MARGIN 
+
+    # Create each rectangle column and when row wise
+    for i in range(num_rows):  # For two rows
+        for j in range(num_columns):  # For three rectangles per row
+            x_pos = first_x + j * (width_per_column + TABLE_MARGIN)
+            y_pos = first_y + i * (height_per_row + TABLE_MARGIN)  
+            rect = pygame.Rect(x_pos, y_pos, width_per_column, height_per_row)  # Create rectangle
+            pygame.draw.rect(window, (128, 128, 128), rect)  # Draw grey rectangle
+
+    # Render and draw the text "Playing table" at the top-left corner
+    menu_margin = 10
+    top_left_font = pygame.font.Font(None, BASE_FONT_SIZE_HALF)  # Font size 36 for "Hallo world"
+    top_left_text_surf = top_left_font.render("Playing table", True, (255, 255, 255))  # Render the text
+    top_left_text_rect = top_left_text_surf.get_rect(topleft=(10, MENU_HEIGHT + menu_margin))  # Positioned at top-left corner with padding
+    window.blit(top_left_text_surf, top_left_text_rect)  # Draw the text on the window
+
+    # Render and draw the text "Playing table" at the top-left corner
+    menu_margin = 10
+    top_left_font = pygame.font.Font(None, BASE_FONT_SIZE_HALF)  # Font size 36 for "Hallo world"
+    top_left_text_surf = top_left_font.render("Playing table", True, (255, 255, 255))  # Render the text
+    top_left_text_rect = top_left_text_surf.get_rect(topleft=(10, MENU_HEIGHT + menu_margin))  # Positioned at top-left corner with padding
+    window.blit(top_left_text_surf, top_left_text_rect)  # Draw the text on the window
+
+    # Draw four equally spaced vertical lines from the horizontal line to the bottom of the screen
+    num_lines = 4
+    player_margin = 20  # Margin from the edge of the screen
+    line_spacing = (window.get_width() - 2 * player_margin) / (num_lines + 1)  # Calculate spacing between lines
+    
+    for i in range(1, num_lines + 1):
+        x_pos = player_margin + i * line_spacing
+        pygame.draw.line(window, (255, 255, 255), (x_pos, center_y + player_margin), (x_pos, window.get_height() - player_margin), 2)
+
+    # Render and draw five equally spaced text labels "Captain X" below the horizontal line
+    num_labels = 5
+    label_font = pygame.font.Font(None, BASE_FONT_SIZE_HALF)  # Font size 36 for "Captain X"
+    label_margin = 10  # Margin from the horizontal line and text
+
+    # Calculate spacing between labels
+    label_spacing = (window.get_width() - 2 * label_margin) / (num_labels)
+    
+    # Calculate how many players are missing to make a list of 5 elements
+    names = []
+    for player in players:
+        names.append(player.name)
+
+    missing_players = range(5 - len(names))
+    for empty_seat in missing_players:
+        names.append("not playing")
+
+
+    for i in range(num_labels):
+        label_surf = label_font.render(f"Captain {i + 1} : {names[i]}", True, (255, 255, 255))  # Render the text
+        x_pos = label_margin + i * label_spacing + label_spacing // 2
+        y_pos = center_y + label_margin + label_surf.get_height()
+        label_rect = label_surf.get_rect(center=(x_pos, y_pos))
+        window.blit(label_surf, label_rect)  # Draw the label on the window
+
+    pygame.display.update()
+
+    running = True
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                mouse_pos = event.pos
+                for i, rect in enumerate(menu_rects):
+                    if rect.collidepoint(mouse_pos):
+                        print(f"{menu_items[i]} menu clicked!")
+                        if menu_items[i] == "Quit":
+                            pygame.quit()  # Quit Pygame
+                            sys.exit()  # Exit the program
+
+ 
+
+
 if __name__ == "__main__":
-    splash_screen_window()
-    player_input()
+
+    # splash_screen_window()
+    # player_input()
+    game_board()

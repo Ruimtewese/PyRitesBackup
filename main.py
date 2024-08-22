@@ -53,5 +53,6 @@ if __name__ == "__main__":
     # UI setup and start
     splash_screen_window() # Display the splash screen window
     players = player_input() # Get the player input
+    # players = ["Koos", "Pieter"]
     # Main game loop
     main(players)
